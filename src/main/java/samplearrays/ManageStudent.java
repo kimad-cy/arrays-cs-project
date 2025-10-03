@@ -169,29 +169,26 @@ public class ManageStudent {
         // [student 1, student 2, student 3]
         // ]
 
-        Student[][] classrooms = new Student[3][3];
+        Student[][] classrooms = new Student[2][3];
 
         classrooms[0][0] = new Student(1, "Alice", 20, 15);
         classrooms[1][0] = new Student(2, "Bob", 21, 19);
-        classrooms[2][0] = new Student(3, "Charlie", 19, 12);
         classrooms[0][1] = new Student(4, "Diana", 16, 8);
         classrooms[1][1] = new Student(5, "Ethan", 17, 14);
-        classrooms[2][1] = new Student(6, "Dina", 18, 14);
         classrooms[0][2] = new Student(7, "Chris", 13, 19);
         classrooms[1][2] = new Student(8, "Rex", 16, 15);
-        classrooms[2][2] = new Student(9, "Donna", 15, 7);
         // print all students in each class
         System.out.println("== All Students ==");
         for (int i = 0; i < classrooms.length; i++) {
-            System.out.println("Classroom " + i);
+            System.out.println("Classroom " + (i+1));
             for (Student student : classrooms[i]){
-                System.out.println(student);
+                System.out.println(student.getName());
             }
         }
         // Prints the Top Student in each class
         for (int j = 0; j < classrooms.length; j++) {
             sortByGradeDesc(classrooms[j]);
-            System.out.println("Top student in classroom " + j + " is: ");
+            System.out.println("Top student in classroom " + (j+1) + " is: ");
             System.out.println((classrooms[j][2]));
 
         }
